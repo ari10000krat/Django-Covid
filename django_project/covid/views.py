@@ -3,12 +3,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('About CODVID-19')
+    return render(request, 'covid/index.html')
+    # return HttpResponse('About CODVID-19')
 
 
 def about(request):
-    return HttpResponse('COVID-19 Statistics')
+    return render(request, 'covid/about.html')
 
 
 def contact(request):
-    return HttpResponse('Contact us')
+    return render(request, 'covid/contact.html')

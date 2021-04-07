@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Banny Bold Round";
+    font-weight: bold;
+    src: local("Banny Bold Round"), url("Banny-BoldRound.woff") format("woff");
+  }
+  
+  * {
+    font-family: "Banny Bold Round";
+    color: #5b67a2;
+    font-size: 19px;
+  }
+  
+  body {
+    background-color: rgba(191, 200, 234, 1);
+  }
+  
+  .leftimg {
+    height: 300px;
+    float: left;
+    padding: 10px 10px 0 0;
+  }
+  .rightimg {
+    margin-right: 7%;
+    height: 300px;
+    float: right;
+    padding: 20px 10px 0 0;
+  }
+  table.rightimg {
+    width: 30%;
+  }
+  
+  table {
+    font-family: "Banny Bold Round";
+    font-size: 14px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 10px 0px 10px 0px;
+    margin-right: 0;
+  }
+  th {
+    font-size: 25px;
+    font-weight: normal;
+    background: #615cb3;
+    border-right: 1px solid #a5becf;
+    border-left: 1px solid #a5becf;
+    color: #fefefe;
+    padding: 8px;
+  }
+  td {
+    background: #fefefe;
+    border-right: 1px solid #a5becf;
+    border-left: 1px solid #a5becf;
+    color: #669;
+    padding: 8px;
+  }
+  
+  tr:hover td {
+    background-color: #668bc4;
+    color: #fefefe;
+  }
+  td:hover tr {
+    background-color: #bfc8ea;
+    color: #fefefe;
+  }
+  
+  .navbar {
+    background: rgb(221, 221, 221);
+    background: linear-gradient(
+      90deg,
+      rgba(221, 221, 221, 1) 25%,
+      rgba(191, 200, 234, 1) 48%,
+      rgba(91, 103, 162, 1) 72%
+    );
+  }
+  
+  .nav-link {
+    color: #668bc4;
+    font-size: 26px;
+  }
+  
+  .nav-link:first-child {
+    margin-right: 100px;
+  }
+  
+  .nav-link:hover {
+    transition: 1s;
+    font-family: "Banny Bold Round";
+    font-size: 28px;
+  }
+  
+  .purple {
+    margin: 0 auto;
+    width: 450px;
+    height: 4px;
+    border-radius: 8px;
+    background-color: rgba(91, 103, 162, 1);
+  }
+  
+  h2 {
+    letter-spacing: 2px;
+    font-size: 43px;
+  }
+  
+  h1:hover {
+    transition: 1s;
+    font-family: "Banny Bold Round";
+    font-size: 50px;
+    text-shadow: 4px 4px 3px rgba(91, 103, 162, 1);
+  }
+  
+  .footer {
+    height: 40px;
+    /* justify-content: center;
+    align-items: center; */
+    background: rgb(221, 221, 221);
+    background: linear-gradient(
+      90deg,
+      rgba(221, 221, 221, 1) 25%,
+      rgba(191, 200, 234, 1) 48%,
+      rgba(91, 103, 162, 1) 72%
+    );
+  }
+  
+  span.contacts-item {
+    color: rgba(221, 221, 221, 1);
+  }
+  
+  a.contacts-item {
+    color: rgba(221, 221, 221, 1);
+    text-decoration: none;
+  }
+  
+  button {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid rgba(91, 103, 162, 1);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
