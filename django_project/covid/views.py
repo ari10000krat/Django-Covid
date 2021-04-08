@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
+
 
 
 def index(request):
@@ -42,4 +43,5 @@ def contact(request):
     if request.method == 'GET':
         return render(request, 'covid/contact.html')
     elif request.method == 'POST':
-        print('POST Method')
+        form = AddForm(request.POST)
+        return redirect("../index")
