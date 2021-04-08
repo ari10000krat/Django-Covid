@@ -13,4 +13,4 @@ class Article(models.Model):
     date = models.DateTimeField('Дата комментария')
 
     def __str__(self):
-        return self.pk
+        return f'{self.date}'

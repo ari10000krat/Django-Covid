@@ -42,7 +42,6 @@
             {{ form.comment }}
 
 
-
             {% comment %} <div class="col-4">
                 <label for="validationCustom01" class="form-label">First name</label>
                 <input type="text" class="form-control" id="validationCustom01" required>
@@ -105,7 +104,7 @@
                         You must agree before submitting.
                     </div>
                 </div>
-            </div>
+            </div>{% endcomment %}
             <div class="col-2">
 
                 <button type="reset" class="btn btn-outline-danger" tabindex="7" type="reset">Reset</button>
@@ -113,6 +112,8 @@
 
             <div class="col-2">
                 <button type="submit" class="btn btn-outline-primary" tabindex="8" value="Submit">Send</button>
-            </div> {% endcomment %}
+            </div> 
+            <h1 style = 'text-align: center'>{{error}}</h1>
+
     </div>
 {% endblock body %}

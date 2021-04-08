@@ -1,11 +1,11 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import ArticleForm
+from .models import Article
 
 
 def index(request):
     return render(request, 'covid/index.html')
-    # return HttpResponse('About CODVID-19')
 
 
 def about(request):
@@ -40,15 +40,26 @@ def about(request):
 
 
 def contact(request):
+    error = ''
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("../index")
+
+        else:
+            error = "Form validation isn't completed"
+
+
+
+
     form = ArticleForm()
-
     data = {
-        'form':form
+        'form':form,
+        'error':error,
+
     }
+    return render(request, 'covid/contact.html',data)
 
-
-    if request.method == 'GET':
-        return render(request, 'covid/contact.html',data)
-    elif request.method == 'POST':
-        #form = AddForm(request.POST)
-        return redirect("../index")
+def comments(request):
+    return render(request,'covid/comments.html')
