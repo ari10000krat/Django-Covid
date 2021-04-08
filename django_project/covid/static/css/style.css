@@ -109,9 +109,7 @@
   }
   
   .footer {
-    height: 40px;
-    /* justify-content: center;
-    align-items: center; */
+    height: 110px;
     background: rgb(221, 221, 221);
     background: linear-gradient(
       90deg,
