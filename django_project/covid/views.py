@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import ArticleForm
 from .models import Article
+from django.views.generic import DetailView
 
 
 def index(request):
@@ -62,4 +63,5 @@ def contact(request):
     return render(request, 'covid/contact.html',data)
 
 def comments(request):
-    return render(request,'covid/comments.html')
+    comments = Article.objects.order_by('-date')
+    return render(request,'covid/comments.html',{'comments':comments})

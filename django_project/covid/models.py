@@ -13,4 +13,8 @@ class Article(models.Model):
     date = models.DateTimeField('Дата комментария')
 
     def __str__(self):
-        return f'{self.date}'
+        return self.username
+
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
