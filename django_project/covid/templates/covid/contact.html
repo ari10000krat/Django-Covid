@@ -32,7 +32,18 @@
                 })()
 
             </script>
-            <div class="col-4">
+            {{ form.first_name }}
+            {{ form.last_name }}
+            {{ form.username }}
+            {{ form.city }}
+            {{ form.state }}
+            {{ form.zip }}
+            {{ form.date }}
+            {{ form.comment }}
+
+
+
+            {% comment %} <div class="col-4">
                 <label for="validationCustom01" class="form-label">First name</label>
                 <input type="text" class="form-control" id="validationCustom01" required>
                 <div class="valid-feedback">Looks good!</div>
@@ -102,6 +113,6 @@
 
             <div class="col-2">
                 <button type="submit" class="btn btn-outline-primary" tabindex="8" value="Submit">Send</button>
-            </div>
+            </div> {% endcomment %}
     </div>
 {% endblock body %}
