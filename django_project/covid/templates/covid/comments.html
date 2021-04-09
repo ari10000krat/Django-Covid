@@ -3,25 +3,35 @@
 {% block title %}Comments{% endblock title %}
 
 {% block body %}
-    <h1>Comments</h1> 
+
+    <br>
+
+    <h1 style='text-align:center'>Comments</h1> 
+    <br>
+    <br>
         {%for el in comments%}
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
             <h2 class="accordion-header" >
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    {{el.date}}
+                    {{el.date}} ({{el.username}})
                 </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Date:       {{el.date}} <br>
-                    First name: {{el.first_name}}<br>
-                    Last name:  {{el.last_name}}<br>
-                    Comment:    {{el.comment}} <br>
+                    {{el.comment}} 
+                    <br>
+                    <a href="{% url 'comments_detail' el.id %}" class='btn btn-info'>Детальнее</a>
+                    <a href="{% url 'commencts_update' el.id %}" class='btn btn-lg'>Обновить</a>
+                    <a href="{% url 'commencts_delete' el.id %}" class='btn btn-warning'>Удалить</a>
+
+
                 </div>
+
             </div>
             </div>
         </div>
+        <br>
         {%endfor%}
 
 

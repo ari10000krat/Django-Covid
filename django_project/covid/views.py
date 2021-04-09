@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import ArticleForm
 from .models import Article
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def index(request):
@@ -51,17 +51,36 @@ def contact(request):
         else:
             error = "Form validation isn't completed"
 
-
-
-
     form = ArticleForm()
     data = {
-        'form':form,
-        'error':error,
+        'form': form,
+        'error': error,
 
     }
-    return render(request, 'covid/contact.html',data)
+    return render(request, 'covid/contact.html', data)
+
 
 def comments(request):
     comments = Article.objects.order_by('-date')
-    return render(request,'covid/comments.html',{'comments':comments})
+    return render(request, 'covid/comments.html', {'comments': comments})
+
+
+class CommentsDetailView(DetailView):
+    model = Article
+    template_name = 'covid/details_view.html'
+    context_object_name = 'article'
+
+
+class CommentsUpdateView(UpdateView):
+    model = Article
+    template_name = 'covid/contact.html'
+    context_object_name = 'article'
+    form_class = ArticleForm
+
+
+class CommentsDeleteView(DeleteView):
+    model = Article
+    template_name = 'covid/comment_delete.html'
+    success_url = '/comments'
+    context_object_name = 'article'
+    form_class = ArticleForm

@@ -15,6 +15,11 @@ class Article(models.Model):
     def __str__(self):
         return self.username
 
+    def get_absolute_url(self):
+        return f'../../comments/'
+
+
+
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
