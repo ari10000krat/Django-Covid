@@ -21,9 +21,10 @@
                 <div class="accordion-body">
                     {{el.comment}} 
                     <br>
-                    <a href="{% url 'comments_detail' el.id %}" class='btn btn-info'>Детальнее</a>
-                    <a href="{% url 'commencts_update' el.id %}" class='btn btn-lg'>Обновить</a>
-                    <a href="{% url 'commencts_delete' el.id %}" class='btn btn-warning'>Удалить</a>
+                    <br>
+                    <a href="{% url 'comments_detail' el.id %}" class='btn btn-primary'>Детальнее</a>
+                    <a href="{% url 'commencts_update' el.id %}" class='btn btn-warning'>Обновить</a>
+                    <a href="{% url 'commencts_delete' el.id %}" class='btn btn-danger'>Удалить</a>
 
 
                 </div>

@@ -5,7 +5,7 @@
 
 {% block body %}
     <div>
-        <h1 class="d-flex justify-content-center pb-1 pt-4">Удаление статьи</h1>
+        <h1 class="d-flex justify-content-center pb-1 pt-4">Add Comment</h1>
         <div class="purple mb-3"></div>
         <form class="row w-100 needs-validation" novalidate method="post">
             {% csrf_token %}
@@ -43,7 +43,7 @@
             </div>
 
             <div class="col-2">
-                <button type="submit" class="btn btn-outline-primary" tabindex="8" value="Submit">Send</button>
+                <button type="submit" class="btn btn-outline-primary" tabindex="8" value="Submit">Add</button>
             </div> 
             <h1 style = 'text-align: center'>{{error}}</h1>
 
